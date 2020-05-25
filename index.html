@@ -27,6 +27,7 @@
 	<main>
 		<section class="greeting">
 			<div class="container">
+				<h1 class="visually-hidden">Седона</h1>
 				<div class="intro">
 					<img src="img/welcome.png" width="458" height="352" alt="Приветствие">
 				</div>
@@ -87,9 +88,10 @@
 		</section>
 		<section class="search">
 			<div class="container">
+				<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
 				<p>Заинтересовались?</p>
 				<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-				<button type="button">Поиск гостиницы в седоне</button>
+				<button type="button">Поиск гостиницы в Cедоне</button>
 				<div class="map">
 					<img src="img/map.png" width="1199" height="473" alt="Карта">
 				</div>
@@ -100,8 +102,8 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="contacts">
-				<a href="#">#Visitsedona</a>
-				<p>Тел: <a href="tel:+74956660266">+7(495) 666-02-66</a></p>
+				<a href="#" aria-label="Посетить Седону">#Visitsedona</a><br>
+				<span>Тел:</span> <a href="tel:+74956660266">+7(495) 666-02-66</a>
 			</div>
 			<ul class="social-list">
 				<li><a href="#" class="social-list__link"><img src="img/twitter.svg" width="17" height="17" alt="Twitter"></a></li>
@@ -109,35 +111,35 @@
 				<li><a href="#" class="social-list__link"><img src="img/youtube.svg" width="17" height="17" alt="YouTube"></a></li>
 			</ul>
 			<div class="creator">
-				<span>Website by</span><a href="#"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
+				<span>Website by</span> <a href="#"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 			</div>
 		</div>
 	</footer>
 
 	<div class="search-form">
-		<form action="https://echo.htmlacademy.ru" method="POST">
+		<form action="https://echo.htmlacademy.ru" method="GET">
 			<div class="calendar">
 				<label for="arrival-date">Дата заезда:</label>
 				<input type="text" id="arrival-date" name="arrival-date" placeholder="24 апреля 2017">
-				<button type="button"></button>
+				<button type="button"><img src="img/calendar.svg" width="21" height="23" alt="Календарь"></button>
 			</div>
 			<div class="calendar">
 				<label for="departure-date">Дата выезда:</label>
 				<input type="text" id="departure-date" name="departure-date" placeholder="4 июля 2017">
-				<button type="button"></button>
+				<button type="button"><img src="img/calendar.svg" width="21" height="23" alt="Календарь"></button>
 			</div>
 			<div class="count">
 				<div class="adult">
 					<label for="adult">Взрослые:</label>
-					<button type="button">-</button>
+					<button type="button" aria-label="Уменьшить число">-</button>
 					<input type="text" id="adult" name="adult" placeholder="2">
-					<button type="button">+</button>
+					<button type="button" aria-label="Увеличить число">+</button>
 				</div>
 				<div class="children">
 					<label for="children">Дети:</label>
-					<button type="button">-</button>
+					<button type="button" aria-label="Уменьшить число">-</button>
 					<input type="text" id="children" name="children" placeholder="0">
-					<button type="button">+</button>
+					<button type="button" aria-label="Увеличить число">+</button>
 				</div>
 			</div>
 			<button type="submit">Найти</button>

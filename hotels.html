@@ -27,37 +27,42 @@
 	<main>
 		<section class="filter">
 			<div class="container">
+				<h1 class="visually-hidden">Фильтр поиска отеля</h1>
 				<form action="https://echo.htmlacademy.ru" method="GET">
 					<div class="filter-item">
 						<fieldset class="filter-column">
 							<legend>Инфраструктура:</legend>
-							<div class="filter-column-input">
-								<input type="checkbox" id="pool" name="pool" checked>
-								<label for="pool">Бассейн</label>
-							</div>
-							<div class="filter-column-input">
-								<input type="checkbox" id="parking" name="parking">
-								<label for="parking">Парковка</label>
-							</div>
-							<div class="filter-column-input">
-								<input type="checkbox" id="wi-fi" name="wi-fi">
-								<label for="wi-fi">Wi-Fi</label>
-							</div>
+							<ul class="filter-column__list">
+								<li class="filter-column__item">
+									<input type="checkbox" id="pool" name="pool" checked>
+									<label for="pool">Бассейн</label>
+								</li>
+								<li class="filter-column__item">
+									<input type="checkbox" id="parking" name="parking">
+									<label for="parking">Парковка</label>
+								</li>
+								<li class="filter-column__item">
+									<input type="checkbox" id="wi-fi" name="wi-fi">
+									<label for="wi-fi">Wi-Fi</label>
+								</li>
+							</ul>
 						</fieldset>
 						<fieldset class="filter-column">
 							<legend>Тип жилья:</legend>
-							<div class="filter-column-input">
-								<input type="checkbox" id="hotel" name="hotel" checked>
-								<label for="hotel">Гостиница</label>
-							</div>
-							<div class="filter-column-input">
-								<input type="checkbox" id="motel" name="motel" checked>
-								<label for="motel">Мотель</label>
-							</div>
-							<div class="filter-column-input">
-								<input type="checkbox" id="apartment" name="apartment" checked>
-								<label for="apartment">Апартаменты</label>
-							</div>
+							<ul class="filter-column__list">
+								<li class="filter-column__item">
+									<input type="checkbox" id="hotel" name="hotel" checked>
+									<label for="hotel">Гостиница</label>
+								</li>
+								<li class="filter-column__item">
+									<input type="checkbox" id="motel" name="motel" checked>
+									<label for="motel">Мотель</label>
+								</li>
+								<li class="filter-column__item">
+									<input type="checkbox" id="apartment" name="apartment" checked>
+									<label for="apartment">Апартаменты</label>
+								</li>
+							</ul>
 						</fieldset>
 						<fieldset class="filter-range">
 							<legend>Стоимость в сутки (Р):</legend>
@@ -84,26 +89,29 @@
 		</section>
 		<section class="sort">
 			<div class="container">
+				<h2 class="visually-hidden">Сортировка</h2>
 				<div class="sort-item">
-					<p>Найдено: 3</p>
-					<span>Сортировка</span>
-					<ul class="sort-filter">
-						<li class="sort-filter__item">
-							<a href="#">По цене</a>
-						</li>
-						<li class="sort-filter__item">
-							<a href="#">По типу</a>
-						</li>
-						<li class="sort-filter__item">
-							<a href="#">По рейтингу</a>
-						</li>
-					</ul>
+					<span>Найдено: 3</span>
+					<fieldset class="sort-filter">
+						<legend>Сортровка:</legend>
+						<ul class="sort-filter__list">
+							<li class="sort-filter__item">
+								<a href="#">По цене</a>
+							</li>
+							<li class="sort-filter__item">
+								<a href="#">По типу</a>
+							</li>
+							<li class="sort-filter__item">
+								<a href="#">По рейтингу</a>
+							</li>
+						</ul>
+					</fieldset>
 					<ul class="sort-button">
 						<li class="sort-button__item">
-							<a href="#"><img src="#" alt="Up"></a>
+							<a href="#"><img src="img/icon-up.svg" width="11" height="10" alt="По возрастанию"></a>
 						</li>
 						<li class="sort-button__item">
-							<a href="#"><img src="#" alt="Down"></a>
+							<a href="#"><img src="img/icon-down.svg" width="11" height="10" alt="По убыванию"></a>
 						</li>
 					</ul>
 				</div>
@@ -111,6 +119,7 @@
 		</section>
 		<section class="catalog">
 			<div class="container">
+				<h2 class="visually-hidden">Список отелей</h2>
 				<ul class="catalog-list">
 					<li class="catalog-list__item">
 						<div>
@@ -120,14 +129,17 @@
 							<a href="#"><h3>Amara Resort & Spa</h3></a>
 							<span>Гостиница</span>
 							<span>От 4000 р.</span>
-							<p>
+							<div>
 								<a href="#">Подробнее</a>
 								<a href="#">Забронировать</a>
-							</p>
+							</div>
 						</div>
 						<div>
 							<div>
-								<img src="#" alt="Звезды">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 							</div>
 							<span>Рейтинг: 8,5</span>
 						</div>
@@ -140,14 +152,16 @@
 							<a href="#"><h3>Desert Quail Inn</h3></a>
 							<span>Мотель</span>
 							<span>От 3000 р.</span>
-							<p>
+							<div>
 								<a href="#">Подробнее</a>
 								<a href="#">Забронировать</a>
-							</p>
+							</div>
 						</div>
 						<div>
 							<div>
-								<img src="#" alt="Звезды">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 							</div>
 							<span>Рейтинг: 8,9</span>
 						</div>
@@ -160,14 +174,15 @@
 							<a href="#"><h3>Villas at Poco Diablo</h3></a>
 							<span>Апартаменты</span>
 							<span>От 2000 р.</span>
-							<p>
+							<div>
 								<a href="#">Подробнее</a>
 								<a href="#">Забронировать</a>
-							</p>
+							</div>
 						</div>
 						<div>
 							<div>
-								<img src="#" alt="Звезды">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
+								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 							</div>
 							<span>Рейтинг: 9,2</span>
 						</div>
@@ -180,8 +195,8 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="contacts">
-				<a href="#">#Visitsedona</a>
-				<p>Тел: <a href="tel:+74956660266">+7(495) 666-02-66</a></p>
+				<a href="#" aria-label="Посетить Седону">#Visitsedona</a><br>
+				<span>Тел:</span> <a href="tel:+74956660266">+7(495) 666-02-66</a>
 			</div>
 			<ul class="social-list">
 				<li><a href="#" class="social-list__link"><img src="img/twitter.svg" width="17" height="17" alt="Twitter"></a></li>
@@ -189,7 +204,7 @@
 				<li><a href="#" class="social-list__link"><img src="img/youtube.svg" width="17" height="17" alt="YouTube"></a></li>
 			</ul>
 			<div class="creator">
-				<span>Website by</span><a href="#"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
+				<span>Website by</span> <a href="#"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 			</div>
 		</div>
 	</footer>
