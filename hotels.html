@@ -82,7 +82,7 @@
 								<div class="toggle-min"></div>
 								<div class="toggle-max"></div>
 							</div>
-							<button type="submit" class="btn">Показать</button>
+							<button class="transparent" type="submit" class="btn">Показать</button>
 						</fieldset>
 					</div>
 				</form>
@@ -94,10 +94,10 @@
 				<div class="sort-item">
 					<span>Найдено: 3</span>
 					<fieldset class="sort-filter">
-						<legend>Сортровка:</legend>
+						<legend>Сортировка:</legend>
 						<ul class="sort-filter__list">
 							<li class="sort-filter__item">
-								<a href="#">По цене</a>
+								<a class="active" href="#">По цене</a>
 							</li>
 							<li class="sort-filter__item">
 								<a href="#">По типу</a>
@@ -109,10 +109,18 @@
 					</fieldset>
 					<ul class="sort-button">
 						<li class="sort-button__item">
-							<a href="#"><img src="img/icon-up.svg" width="11" height="10" alt="По возрастанию"></a>
+							<a href="#">
+								<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+								</svg>
+							</a>
 						</li>
 						<li class="sort-button__item">
-							<a href="#"><img src="img/icon-down.svg" width="11" height="10" alt="По убыванию"></a>
+							<a class="active-button" href="#">
+								<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
+								</svg>
+							</a>
 						</li>
 					</ul>
 				</div>

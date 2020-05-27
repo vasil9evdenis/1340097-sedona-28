@@ -351,10 +351,123 @@ a.menu-list__item--current {
 
 /* ------ Hotels ------ */
 
+/* ------ Filter ------ */
+
+.filter-item {
+	background-image: url(../img/background-2.jpg);
+	background-color: var(--background-blue);
+	background-position: top center;
+	background-repeat: no-repeat;
+	color: var(--text-white);
+}
+
+.filter-column {
+	border: 0;
+}
+
+.filter-column__list {
+	list-style: none;
+}
+
+.filter-column legend {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.filter-range {
+	border: 0;
+}
+
+.filter-range legend {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.transparent {
+	display: block;
+	width: 137px;
+	height: 36px;
+	color: var(--text-white);
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+	background: 0 0;
+	border: 2px solid var(--text-white);
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.transparent:hover,
+.transparent:focus {
+	background-color: var(--text-white);
+	color: var(--text-black);
+}
+
+/* ------ Sort ------ */
+
+.sort-item span {
+	font-size: 21px;
+	font-weight: 700;
+	color: var(--text-black);
+}
+
+.sort-filter {
+	border: 0;
+}
+
+.sort-filter legend {
+	font-size: 12px;
+	color: var(--text-black);
+}
+
+.sort-filter__list {
+	list-style: none;
+}
+
+.sort-filter__item a {
+	font-size: 12px;
+	color: var(--text-grey);
+	border-bottom: 1px dashed var(--text-blue);
+
+}
+
+.sort-filter__item a:hover,
+.sort-filter__item a:focus {
+	color: var(--text-blue)
+}
+
+.sort-filter__item a:active {
+	color: var(--text-black);
+	border-bottom: 1px dashed transparent;
+}
+
+a.active {
+	color: var(--text-blue);
+	border-bottom: 1px dashed transparent;
+}
+
+.sort-button {
+	list-style: none;
+}
+
+.sort-button__item:hover path,
+.sort-button__item:focus path {
+	fill: var(--text-black);
+}
+
+.sort-button__item:active path {
+	fill: var(--text-blue);
+}
+
+a.active-button path {
+	fill: var(--text-blue);
+}
+
 /* ------ Catalog ------ */
 
 .catalog-list {
 	list-style: none;
+	
 }
 
 .catalog-list__item {
