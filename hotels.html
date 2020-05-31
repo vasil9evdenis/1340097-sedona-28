@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
 	<meta charset="utf-8">
@@ -8,9 +8,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-	<header class="header">
-		<div class="container">
+<body class="page-body">
+	<div class="container">
+		<header class="header">
 			<nav class="navigation">
 				<a class="logo" href="index.html">
 					<img src="img/logo.svg" width="138" height="70" alt="Логотип «Седона»">
@@ -22,12 +22,10 @@
 					<li><a class="menu-list__item--current" href="#">Гостиницы</a></li>
 				</ul>
 			</nav>
-		</div>
-	</header>
+		</header>
 
-	<main>
-		<section class="filter">
-			<div class="container">
+		<main>
+			<section class="filter">
 				<h1 class="visually-hidden">Фильтр поиска отеля</h1>
 				<form action="https://echo.htmlacademy.ru" method="GET">
 					<div class="filter-item">
@@ -86,10 +84,8 @@
 						</fieldset>
 					</div>
 				</form>
-			</div>
-		</section>
-		<section class="sort">
-			<div class="container">
+			</section>
+			<section class="sort">
 				<h2 class="visually-hidden">Сортировка</h2>
 				<div class="sort-item">
 					<span>Найдено: 3</span>
@@ -124,10 +120,8 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-		</section>
-		<section class="catalog">
-			<div class="container">
+			</section>
+			<section class="catalog">
 				<h2 class="visually-hidden">Список отелей</h2>
 				<ul class="catalog-list">
 					<li class="catalog-list__item">
@@ -192,17 +186,15 @@
 							<div>
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
-							</div>
+								</div>
 							<span class="rating">Рейтинг: 9,2</span>
 						</div>
 					</li>
 				</ul>
-			</div>
-		</section>
-	</main>
+			</section>
+		</main>
 
-	<footer class="footer">
-		<div class="container">
+		<footer class="footer">
 			<div class="contacts">
 				<a href="#" aria-label="Посетить Седону">#Visitsedona</a><br>
 				<span>Тел:</span> <a href="tel:+74956660166">+7(495) 666-01-66</a>
@@ -238,8 +230,8 @@
 					</svg>
 				</a>
 			</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
 </body>
 
 </html>
