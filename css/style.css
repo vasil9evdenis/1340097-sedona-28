@@ -445,6 +445,10 @@ a.menu-list__item--current {
 	background-position: top center;
 	background-repeat: no-repeat;
 	color: var(--text-white);
+	padding-top: 26px;
+	padding-bottom: 32px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 3fr;
 }
 
 .filter-column {
@@ -469,6 +473,11 @@ a.menu-list__item--current {
 	font-weight: 700;
 }
 
+.price-control {
+	display: flex;
+
+}
+
 .transparent {
 	display: block;
 	width: 137px;
@@ -491,6 +500,10 @@ a.menu-list__item--current {
 
 /* ------ Sort ------ */
 
+.sort-item {
+	display: flex;
+}
+
 .sort-item span {
 	font-size: 21px;
 	font-weight: 700;
@@ -498,15 +511,17 @@ a.menu-list__item--current {
 }
 
 .sort-filter {
+	display: flex;
 	border: 0;
 }
 
-.sort-filter legend {
+.sort-filter span {
 	font-size: 12px;
 	color: var(--text-black);
 }
 
 .sort-filter__list {
+	display: flex;
 	list-style: none;
 }
 
@@ -533,6 +548,7 @@ a.active {
 }
 
 .sort-button {
+	display: flex;
 	list-style: none;
 }
 
@@ -553,10 +569,13 @@ a.active-button path {
 
 .catalog-list {
 	list-style: none;
-	
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 
 .catalog-list__item {
+	display: grid;
+	grid-template-columns: 1fr 1fr 4fr;
 	border-top: 1px solid var(--background-border);
 	border-bottom: 1px solid var(--background-border);
 }
@@ -577,6 +596,10 @@ a.active-button path {
 .catalog-list__item h3 {
 	font-size: 21px;
 	font-weight: 700;
+}
+
+.catalog-list__link {
+	display: flex;
 }
 
 .catalog-list__link a {
