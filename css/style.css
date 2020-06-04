@@ -46,6 +46,8 @@
 	--background-grey: #EEEEEE;
 	--background-rating: #F2F2F2;
 	--background-border: #E5E5E5;
+
+	--toggle-point: #ABABAB;
 }
 
 /* ------ Global ------ */
@@ -219,7 +221,7 @@ a.menu-list__item--current {
 }
 
 .reason-list__item h3 {
-	width: 150px;
+	width: 150.5px;
 	font-size: 21px;
 	font-weight: 700;
 	color: var(--text-black);
@@ -246,7 +248,7 @@ a.menu-list__item--current {
 }
 
 .reason-list__item--blue p {
-	width: 301px;
+	width: 303px;
 }
 
 .reason-list__picture img {
@@ -373,7 +375,8 @@ a.menu-list__item--current {
 	color: var(--text-black);
 	padding-top: 18px;
 	padding-bottom: 36px;
-	margin-left: 131px;
+	margin-left: 73px;
+	text-align: center;
 }
 
 .contacts a {
@@ -385,11 +388,9 @@ a.menu-list__item--current {
 	list-style: none;
 	padding-top: 36px;
 	padding-bottom: 36px;
-	justify-content: center;
-}
-
-.social-list li {
-	margin-right: 5px;
+	width: 150px;
+	margin: 0 auto;
+	justify-content: space-between;
 }
 
 .social-list a {
@@ -419,7 +420,7 @@ a.menu-list__item--current {
 .creator {
 	padding-top: 38px;
 	padding-bottom: 41px;
-	margin-left: 102px;
+	margin-left: 65px;
 	width: 197px;
 	display: flex;
 	align-items: center;
@@ -444,19 +445,41 @@ a.menu-list__item--current {
 	background-color: var(--background-blue);
 	background-position: top center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	color: var(--text-white);
-	padding-top: 26px;
+	padding-top: 25px;
+	padding-right: 73px;
+	padding-left: 72px;
 	padding-bottom: 32px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 3fr;
 }
 
+.filter-column:nth-child(2) {
+	margin-left: 43px;
+}
+
 .filter-column {
 	border: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .filter-column__list {
 	list-style: none;
+}
+
+.filter-column__item {
+	margin-top: 25px;
+}
+
+.filter-column__item input {
+	cursor: pointer;
+}
+
+.filter-column__item label {
+	padding-left: 13px;
+	cursor: pointer;
 }
 
 .filter-column legend {
@@ -466,6 +489,9 @@ a.menu-list__item--current {
 
 .filter-range {
 	border: 0;
+	padding: 0;
+	margin: 0;
+	margin-left: 317px;
 }
 
 .filter-range legend {
@@ -475,7 +501,84 @@ a.menu-list__item--current {
 
 .price-control {
 	display: flex;
+	border: 2px solid var(--text-white);
+	width: 313px;
+	justify-content: space-between;
+	position: relative;
+	margin-top: 12px;
+}
 
+.price-control::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 22px;
+	background: var(--text-white);
+	left: 50%;
+	top: 5px;
+}
+
+.price input {
+	background: none;
+	border: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--text-white);
+	width: 152px;
+	height: 30px;
+}
+
+.price-max input{
+	width: 149px;
+}
+
+.price input::-webkit-input-placeholder {color: var(--text-white);}
+.price input::-moz-placeholder          {color: var(--text-white);}/* Firefox 19+ */
+.price input:-moz-placeholder           {color: var(--text-white);}/* Firefox 18- */
+.price input:-ms-input-placeholder      {color: var(--text-white);}
+
+.range-control {
+	margin-top: 20px;
+	position: relative;
+}
+
+.range-control .scale {
+	height: 2px;
+	width: 317px;
+	background-color: var(--text-light);
+}
+
+.range-control .bar {
+	width: 260px;
+	height: 2px;
+	background-color: var(--text-white);
+}
+
+.toggle {
+	position: absolute;
+	top: -9px;
+	width: 4px;
+	height: 4px;
+	background: var(--toggle-point);
+	border: 8px solid var(--text-white);
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(0,1,1,0.2);
+	cursor: pointer;
+}
+
+.toggle:hover,
+.toggle:focus {
+	transform: scale(1.1);
+}
+
+.toggle-min {
+
+}
+
+.toggle-max {
+	left: 252px;
 }
 
 .transparent {
@@ -486,10 +589,12 @@ a.menu-list__item--current {
 	font-size: 14px;
 	line-height: 21px;
 	text-transform: uppercase;
-	background: 0 0;
+	background: none;
 	border: 2px solid var(--text-white);
 	border-radius: 2px;
 	cursor: pointer;
+	margin-top: 33px;
+	margin-left: 85px;
 }
 
 .transparent:hover,
@@ -502,6 +607,10 @@ a.menu-list__item--current {
 
 .sort-item {
 	display: flex;
+	padding-top: 31px;
+	padding-bottom: 30px;
+	padding-left: 73px;
+	padding-right: 73px;
 }
 
 .sort-item span {
@@ -513,6 +622,8 @@ a.menu-list__item--current {
 .sort-filter {
 	display: flex;
 	border: 0;
+	margin-left: 46px;
+	line-height: 18px;
 }
 
 .sort-filter span {
@@ -523,6 +634,11 @@ a.menu-list__item--current {
 .sort-filter__list {
 	display: flex;
 	list-style: none;
+	margin-left: 8px;
+}
+
+.sort-filter__item {
+	margin-left: 32.5px;
 }
 
 .sort-filter__item a {
@@ -550,6 +666,12 @@ a.active {
 .sort-button {
 	display: flex;
 	list-style: none;
+	margin-left: auto;
+	margin-top: 4px;
+}
+
+.sort-button__item {
+	margin-left: 12px;
 }
 
 .sort-button__item:hover path,
@@ -575,9 +697,21 @@ a.active-button path {
 
 .catalog-list__item {
 	display: grid;
-	grid-template-columns: 1fr 1fr 4fr;
+	grid-template-columns: 0.5fr 1fr 2fr;
 	border-top: 1px solid var(--background-border);
+	padding-top: 23px;
+	padding-bottom: 23px;
+	padding-left: 73px;
+	padding-right: 73px;
+	align-items: flex-start;
+}
+
+.catalog-list li:last-child {
 	border-bottom: 1px solid var(--background-border);
+}
+
+.catalog-list__image {
+	padding-top: 7px;
 }
 
 .catalog-list__item a {
@@ -594,12 +728,27 @@ a.active-button path {
 }
 
 .catalog-list__item h3 {
+	display: inline;
+	margin: 0;
 	font-size: 21px;
 	font-weight: 700;
 }
 
+.catalog-list__info {
+	margin-top: 3px;
+	margin-left: 13px;
+}
+
+.cost {
+	display: flex;
+	justify-content: space-between;
+	width: 180px;
+	margin-top: 7px;
+}
+
 .catalog-list__link {
 	display: flex;
+	margin-top: 15px;
 }
 
 .catalog-list__link a {
@@ -609,6 +758,7 @@ a.active-button path {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-right: 6px;
 }
 
 .catalog-list__details {
@@ -645,6 +795,20 @@ a.catalog-list__book:active {
 	color: var(--text-light);
 }
 
+.catalog-list__rating {
+margin-left: auto;
+}
+
+.stars {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 6px;
+}
+
+.stars img {
+	margin-left: 4px;
+}
+
 .rating {
 	color: var(--text-rating);
 	background-color: var(--background-rating);
@@ -654,4 +818,5 @@ a.catalog-list__book:active {
 	height: 27px;
 	align-items: center;
 	justify-content: center;
+	margin-top: 47px;
 }

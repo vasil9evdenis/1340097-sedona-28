@@ -66,19 +66,21 @@
 						<fieldset class="filter-range">
 							<legend>Стоимость в сутки (Р):</legend>
 							<div class="price-control">
-								<div class="min-price">
+								<div class="price price-min">
 									<label for="min"><span class="visually-hidden">Минимальная цена</span></label>
 									<input type="text" id="min" name="min" placeholder="от 0">
 								</div>
-								<div class="max-price">
+								<div class="price price-max">
 									<label for="max"><span class="visually-hidden">Максимальная цена</span></label>
 									<input type="text" id="max" name="max" placeholder="до 3000">
 								</div>
 							</div>
 							<div class="range-control">
-								<div class="line"></div>
-								<div class="toggle-min"></div>
-								<div class="toggle-max"></div>
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="toggle toggle-min" tabindex="0"></div>
+								<div class="toggle toggle-max" tabindex="0"></div>
 							</div>
 							<button class="transparent" type="submit" class="btn">Показать</button>
 						</fieldset>
@@ -125,20 +127,22 @@
 				<h2 class="visually-hidden">Список отелей</h2>
 				<ul class="catalog-list">
 					<li class="catalog-list__item">
-						<div>
+						<div class="catalog-list__image">
 							<img src="img/hotel-1.jpg" width="135" height="90" alt="Фотография Amara Resort & Spa">
 						</div>
-						<div>
+						<div class="catalog-list__info">
 							<a href="#"><h3>Amara Resort & Spa</h3></a>
-							<span>Гостиница</span>
-							<span>От 4000 р.</span>
+							<div class="cost">
+								<span>Гостиница</span>
+								<span>От 4000 р.</span>
+							</div>
 							<div class="catalog-list__link">
 								<a class="catalog-list__details" href="#">Подробнее</a>
 								<a class="catalog-list__book" href="#">Забронировать</a>
 							</div>
 						</div>
-						<div>
-							<div>
+						<div class="catalog-list__rating">
+							<div class="stars">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
@@ -148,20 +152,22 @@
 						</div>
 					</li>
 					<li class="catalog-list__item">
-						<div>
+						<div class="catalog-list__image">
 							<img src="img/hotel-2.jpg" width="135" height="90" alt="Фотография Desert Quail Inn">
 						</div>
-						<div>
+						<div class="catalog-list__info">
 							<a href="#"><h3>Desert Quail Inn</h3></a>
-							<span>Мотель</span>
-							<span>От 3000 р.</span>
+							<div class="cost">
+								<span>Мотель</span>
+								<span>От 3000 р.</span>
+							</div>
 							<div class="catalog-list__link">
 								<a class="catalog-list__details" href="#">Подробнее</a>
 								<a class="catalog-list__book" href="#">Забронировать</a>
 							</div>
 						</div>
-						<div>
-							<div>
+						<div class="catalog-list__rating">
+							<div class="stars">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
@@ -170,20 +176,22 @@
 						</div>
 					</li>
 					<li class="catalog-list__item">
-						<div>
+						<div class="catalog-list__image">
 							<img src="img/hotel-3.jpg" width="135" height="90" alt="Фотография Villas at Poco Diablo">
 						</div>
-						<div>
+						<div class="catalog-list__info">
 							<a href="#"><h3>Villas at Poco Diablo</h3></a>
-							<span>Апартаменты</span>
-							<span>От 2000 р.</span>
+							<div class="cost">
+								<span>Апартаменты</span>
+								<span>От 2000 р.</span>
+							</div>
 							<div class="catalog-list__link">
 								<a class="catalog-list__details" href="#">Подробнее</a>
 								<a class="catalog-list__book" href="#">Забронировать</a>
 							</div>
 						</div>
-						<div>
-							<div>
+						<div class="catalog-list__rating">
+							<div class="stars">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								<img src="img/star.svg" width="19" height="17" alt="Звезда">
 								</div>
