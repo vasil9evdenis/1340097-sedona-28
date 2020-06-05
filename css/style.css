@@ -48,6 +48,7 @@
 	--background-border: #E5E5E5;
 
 	--toggle-point: #ABABAB;
+	--text-count: #A9A9A9;
 }
 
 /* ------ Global ------ */
@@ -99,11 +100,12 @@ ul, li {
 	width: 1200px;
 	margin: 0 auto;
 	background-color: var(--text-white);
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 	min-height: 100%;
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
+	position: relative;
 }
 
 /* ------ Index ------ */
@@ -820,3 +822,178 @@ margin-left: auto;
 	justify-content: center;
 	margin-top: 47px;
 }
+
+/* ------ Search Form ------ */
+
+.search-form {
+	position: absolute;
+	margin: 0 auto;
+	width: 568px;
+	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+	background-color: var(--text-white);
+	top: 2169px;
+	left: 316px;
+}
+
+.search-form form {
+	margin: 0 auto;
+	margin-top: 55px;
+	width: 458px;
+}
+
+.search-form label {
+	font-weight: 700;
+	line-height: 26px;
+	color: var(--text-black);
+}
+
+.calendar {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 29px;
+}
+
+.calendar input {
+	padding: 0;
+	width: 331px;
+	height: 34px;
+	border: none;
+	background-color: var(--background-rating);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	padding-left: 11px;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+}
+
+.search-form input:hover {
+	background-color: var(--input-dark-grey);
+}
+
+.search-form input:focus {
+	outline: none;
+	background-color: var(--text-white);
+	border: 2px solid var(--background-border);
+}
+
+.search-form input::-moz-placeholder          {color: var(--text-black);}/* Firefox 19+ */
+.search-form input:-moz-placeholder           {color: var(--text-black);}/* Firefox 18- */
+.search-form input:-ms-input-placeholder      {color: var(--text-black);}
+.search-form input::-webkit-input-placeholder {color: var(--text-black);}
+
+.calendar button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	right: 3px;
+	top: 6px;
+	cursor: pointer;
+}
+
+.calendar button:hover path,
+.calendar button:focus path {
+	fill: var(--text-black);
+}
+
+.calendar button:active path {
+	fill: var(--text-blue);
+}
+
+.count {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	position: relative;
+}
+
+.count input {
+	padding: 0;
+	width: 110px;
+	height: 34px;
+	border: none;
+	background-color: var(--background-rating);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+	text-align: center;
+	border: 2px solid transparent;
+}
+
+.count button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 24px;
+	color: var(--text-count);
+	position: absolute;
+}
+
+.count button:hover,
+.count button:focus {
+	color: var(--text-black);
+}
+
+.count button:active {
+	color: var(--text-blue);
+}
+
+.adult label {
+	margin-right: 36px;
+}
+
+.children label {
+	margin-right: 23px;
+}
+
+.adult .minus {
+	top: 3px;
+	left: 118px;
+}
+
+.adult .plus {
+	top: 5px;
+	left: 194px;
+}
+
+.children .minus {
+	top: 3px;
+	right: 81px;
+}
+
+.children .plus {
+	top: 5px;
+	right: 6px;
+}
+
+.search-button {
+	margin-top: 54px;
+	margin-bottom: 55px;
+	width: 458px;
+	height: 58px;
+	border: none;
+	color: var(--text-white);
+	text-transform: uppercase;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+	background-color: var(--button-light-blue);
+	cursor: pointer;
+}
+
+.search-button:hover,
+.search-button:focus {
+	background-color: var(--button-blue);
+}
+
+.search-button:active {
+	color: var(--text-light);
+	background-color: var(--button-dark-blue);
+}
+
