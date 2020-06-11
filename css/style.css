@@ -90,17 +90,6 @@ ul, li {
 	overflow: hidden;
 }
 
-.close {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
 /* ------ Grid ------ */
 
 .page {
@@ -200,6 +189,8 @@ a.current {
 
 .main-content {
 	margin-top: 44px;
+	position: relative;
+	z-index: 2;
 }
 
 .reasons {
@@ -326,9 +317,12 @@ a.current {
 
 /* ------ Search ------ */
 
-.search {
+.search-text {
+	position: relative;
+	z-index: 2;
+	padding-top: 56px;
 	text-align: center;
-	margin-top: 56px;
+	background-color: var(--text-white);
 }
 
 .search span {
@@ -357,6 +351,7 @@ a.current {
 	color: var(--text-white);
 	background-color: var(--button-light-brown);
 	border: 0;
+	outline: none;
 }
 
 .button:hover,
@@ -615,10 +610,6 @@ a.current {
 	transform: scale(1.1);
 }
 
-.toggle-min {
-
-}
-
 .toggle-max {
 	left: 252px;
 }
@@ -867,12 +858,40 @@ margin-left: auto;
 
 .search-form {
 	position: absolute;
+	z-index: 1;
 	margin: 0 auto;
 	width: 568px;
 	box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 	background-color: var(--text-white);
 	top: 2169px;
 	left: 316px;
+	animation-name: drop-up;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.show {
+	display: block;
+	animation-name: drop-down;
+	animation-duration: 1s;
+}
+
+@keyframes drop-down {
+	0% {
+		top: 1774px;
+	}
+	100% {
+		top: 2169px;
+	}
+}
+
+@keyframes drop-up {
+	0% {
+		top: 2169px;
+	}
+	100% {
+		top: 1774px;
+	}
 }
 
 .search-form form {
