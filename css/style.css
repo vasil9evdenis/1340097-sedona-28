@@ -503,6 +503,7 @@ a.current {
 	cursor: pointer;
 	position: relative;
 	display: inline-block;
+	vertical-align: top;
 	user-select: none;
 }
 
