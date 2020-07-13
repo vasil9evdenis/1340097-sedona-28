@@ -103,6 +103,7 @@ ul, li {
 	box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 	min-height: 100%;
 	display: grid;
+	grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
 	position: relative;
@@ -504,7 +505,9 @@ a.current {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
-	user-select: none;
+	-webkit-user-select: none;
+		 -moz-user-select: none;
+					user-select: none;
 }
 
 .filter-column__item input + label::before {
@@ -527,8 +530,7 @@ a.current {
 	background-image: url(../img/checkbox-on.svg);
 }
 
-.filter-column__item input:hover + label,
-.filter-column__item input:focus + label {
+.filter-column__item input:disabled + label {
 	opacity: 0.7;
 }
 
@@ -878,15 +880,29 @@ margin-left: auto;
 	background-color: var(--text-white);
 	top: 2169px;
 	left: 316px;
-	animation-name: drop-up;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
+	-webkit-animation-name: drop-up;
+					animation-name: drop-up;
+	-webkit-animation-duration: 1s;
+					animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+					animation-fill-mode: forwards;
 }
 
 .show {
 	display: block;
-	animation-name: drop-down;
-	animation-duration: 1s;
+	-webkit-animation-name: drop-down;
+					animation-name: drop-down;
+	-webkit-animation-duration: 1s;
+					animation-duration: 1s;
+}
+
+@-webkit-keyframes drop-down {
+	0% {
+		top: 1774px;
+	}
+	100% {
+		top: 2169px;
+	}
 }
 
 @keyframes drop-down {
@@ -895,6 +911,15 @@ margin-left: auto;
 	}
 	100% {
 		top: 2169px;
+	}
+}
+
+@-webkit-keyframes drop-up {
+	0% {
+		top: 2169px;
+	}
+	100% {
+		top: 1774px;
 	}
 }
 
@@ -1068,4 +1093,3 @@ margin-left: auto;
 	color: var(--text-light);
 	background-color: var(--button-dark-blue);
 }
-
